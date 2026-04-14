@@ -1,0 +1,23 @@
+{
+  "name": "commerce-web-responsive---original",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhoan119/Prototipo-Tienda-online.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jhoan119/Prototipo-Tienda-online/issues"
+  },
+  "homepage": "https://github.com/Jhoan119/Prototipo-Tienda-online#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  }
+}
