@@ -18,41 +18,34 @@
         <!--IMAGEN DEL LOGO PANDEA-->
 
         <section id="header">
-            <a href="#"><img src="/img/logo2.png"  class="logo" alt=""></a>
+            <a href="#"><img src="/img/logo2.png" class="logo" alt="Logo Pandea"></a>
+
             <div id="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
 
             <!--MENU DE NAVEGACION-->
-        </div>
             <ul id="navbar">
-                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="Shop.html">Productos</a></li>
-                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="Blog.html">Categorias</a></li>
                 <li><a href="About.html">Acerca De</a></li>
             </ul>
 
             <!--ICONOS-->
+            <div class="nav-icons">
+                <form class="search-bar">
+                    <input type="text" placeholder="Buscar..." />
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
 
-        <div class="nav-icons">
-           <form class="search-bar">
-             <input type="text" placeholder="Buscar..." />
-             <button type="submit"><i class="fas fa-search"></i></button>
+                <a href="#" class="cart-link">
+                    <i class="bi bi-bag-heart"></i>
+                    <span id="cart-count">0</span>
+                </a>
 
-        <!--BOLSA DE COMPRAS Y FORMULARIO-->
-
-        </form>
-
-             <a href="#" class="cart-link">
-             <i class="bi bi-bag-heart"></i>
-             <span id="cart-count">0</span>
-            </a>
-            
-            <button class="button-login" onclick="window.location.href='Formulario/Login.html'">Login</button>
-        </div>
-
-        </section>
-            </div> 
+                <button class="button-login" onclick="window.location.href='Formulario/Login.html'">Login</button>
+            </div>
         </section>
 
         <!--2 DEL MENU DE NAVEGACION-->
@@ -95,12 +88,25 @@
         <!--PANEL LATERAL DEL CARRITO -->
         <div id="cart-sidebar">
             <div class="cart-header">
-            <h3>Carrito</h3>
-            <button id="close-cart">&times;</button>
+                <h3>Carrito</h3>
+                <button id="close-cart">&times;</button>
             </div>
             <div id="cart-items"></div>
             <div class="cart-footer">
-            <strong>Total:</strong> <span id="cart-total">$0</span>
+                <div class="cart-total-row">
+                    <strong>Total:</strong> <span id="cart-total">$0</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn">Proceder al pago →</button>
+            </div>
+        </div>
+
+        <!-- MODAL DE CONFIRMACIÓN DE PAGO -->
+        <div id="checkout-modal" class="modal-overlay">
+            <div class="modal-box">
+                <h3>¡Pedido confirmado!</h3>
+                <p>Gracias por tu compra en <strong>Pandea</strong>. Recibirás un correo con los detalles de tu pedido.</p>
+                <div id="modal-summary"></div>
+                <button id="modal-close-btn" class="modal-close-btn">Cerrar</button>
             </div>
         </div>
 
@@ -111,7 +117,7 @@
     <div class="pro-container">
         
         <div class="pro">
-            <img src="products/f1.jpg" alt="Camisa Colorida">
+            <img src="products/f1.jpg" alt="Camisa Colorida" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
                 <h5>Camisa Colorida Abstracta</h5>
@@ -128,7 +134,7 @@
         </div>
 
         <div class="pro">
-            <img src="products/f2.jpg" alt="Camisa Hojas y Flores">
+            <img src="products/f2.jpg" alt="Camisa Hojas y Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
                 <h5>Camisa Floral Tropical</h5>
@@ -145,7 +151,7 @@
         </div>
 
         <div class="pro">
-            <img src="products/f3.jpg" alt="Camisa Flores Vintage">
+            <img src="products/f3.jpg" alt="Camisa Flores Vintage" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
                 <h5>Camisa Floral Vintage</h5>
@@ -162,7 +168,7 @@
         </div>
 
         <div class="pro">
-            <img src="products/f4.jpg" alt="Camisa Blanca Floral">
+            <img src="products/f4.jpg" alt="Camisa Blanca Floral" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
                 <h5>Camisa Blanca con Rosas</h5>
@@ -179,10 +185,10 @@
         </div>
 
         <div class="pro">
-            <img src="products/f5.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f5.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>A</h5>
+                <h5>Suéter con camisa blanca</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -195,10 +201,10 @@
             </a>
         </div>
         <div class="pro">
-            <img src="products/f6.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f6.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>B</h5>
+                <h5>Pantalón corto</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -212,10 +218,10 @@
         </div>
 
         <div class="pro">
-            <img src="products/f7.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f7.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>C</h5>
+                <h5>Blusa marrón</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -229,10 +235,10 @@
         </div>
 
         <div class="pro">
-            <img src="products/f8.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f8.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>D</h5>
+                <h5>Camisa azul manga larga</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -246,10 +252,10 @@
         </div>
 
         <div class="pro">
-            <img src="products/f9.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f9.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>D</h5>
+                <h5>Camisa cuadros manga larga</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -263,10 +269,10 @@
         </div>
 
         <div class="pro">
-            <img src="products/f10.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f10.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>F</h5>
+                <h5>Camisa blanca manga larga</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -280,10 +286,10 @@
         </div>
 
         <div class="pro">
-            <img src="products/f11.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f11.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>G</h5>
+                <h5>Camisa negra manga corta</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -296,10 +302,10 @@
             </a>
         </div>
                 <div class="pro">
-            <img src="products/f12.jpg" alt="Camisa Azul con Flores">
+            <img src="products/f12.jpg" alt="Camisa Azul con Flores" loading="lazy">
             <div class="des">
                 <span>Pandea</span>
-                <h5>H</h5>
+                <h5>Camisa Style Mach manga corta</h5>
                 <div class="star">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <i class="fas fa-star"></i><i class="fas fa-star"></i>
@@ -308,30 +314,14 @@
                 <h4>$82.000</h4>
             </div>
             <a href="#">
-                <i class="bi bi-cart3 cart-icon add-to-cart" data-id="11"></i><!--ID DEL CARRITO-->
+                <i class="bi bi-cart3 cart-icon add-to-cart" data-id="12"></i><!--ID DEL CARRITO-->
             </a>
         </div>
 
     </div>
-        </section>
-        
-        <script src="script.js"></script><!--CADENAJAVASCRIP-->
+    </section>
 
-            <script>
-            const toggle = document.getElementById("mobile-menu-toggle");
-            const navbar = document.getElementById("navbar");
-            const navLinks = navbar.querySelectorAll("a");
-
-            toggle.addEventListener("click", () => {
-                navbar.classList.toggle("show");
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener("click", () => {
-                navbar.classList.remove("show");
-                });
-            });
-            </script>
-        </script>
+        <script src="script.js"></script>
+        <script src="navbar.js"></script>
     </body>
 </html>
